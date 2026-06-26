@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="9;URL='index2.html'">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>جاري المعالجة</title>
+<link rel="stylesheet" href="../../assets/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-...YOUR-INTEGRITY-KEY...==" crossorigin="anonymous" />
+  <style>
+    body{
+      width: 100%;
+      height: 100%;
+      background-color: bisque;
+    }
+    #progress-bar {
+      width: 0%;
+      height: 10px; /* ارتفاع شريط التقدم */
+      background-color: #554; /* لون خلفية شريط التقدم */
+      position: relative;
+    }
+
+    #progress-bar .progress-bar-fill {
+      width: 10%;
+      height: 100%; /* ارتفاع ملء شريط التقدم */
+      background-color: #dc3545; /* لون ملء شريط التقدم */
+      transition: width 1s ease-in-out;
+    }
+
+    .center-div {
+      /* background-color: #dc3545; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .size{
+      width: 50%;
+      height: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container center-div">
+    <div class="row ">
+      <div class="col-md-6 mt-5">
+        <div id="myDiv"></div>
+        <h4 class="text-center">جاري المعالجة...</h4>
+        <div id="progress-bar" class="size">
+          <div class="progress-bar-fill"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- Popper.js first, then Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    // تحديث قيمة شريط التقدم بصورة تدريجية
+    function updateProgressBar() {
+      var progressBar = document.querySelector('.progress-bar-fill');
+      var value = 0;
+      var interval = setInterval(function () {
+        value += 10;
+        progressBar.style.width = value + '%';
+        if (value >= 100) {
+          clearInterval(interval);
+        }
+      }, 1200);
+    }
+    setTimeout(updateProgressBar, 1200);
+
+    // استهدف العنصر باستخدام معرفه
+    var myElement = document.getElementById("myDiv");
+
+    // إنشاء العنصر الجديد للإشارة
+    var indicator = document.createElement('div');
+    indicator.classList.add('loader-indicator');
+
+    // إضافة الإشارة إلى العنصر المستهدف
+    myElement.appendChild(indicator);
+
+    setTimeout(function () {
+      var circle = document.querySelector('.loader-circle');
+      var checkmark = document.querySelector('.loader-checkmark');
+      circle.style.opacity = '100';
+      checkmark.style.opacity = '100';
+    }, 2000);
+  </script>
+</body>
+
+</html>
