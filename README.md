@@ -1,3 +1,3 @@
-<p align="center">
-  <img src="https://github.com/eahmedalsorori/eahmedalsorori/blob/main/001.png" width="100%" />
+p align="center">
+  <img src="https://github.com/eahmedalsorori/profile/blob/main/img/001.png" alt="غلاف المشروع" width="100%" />
 </p>
