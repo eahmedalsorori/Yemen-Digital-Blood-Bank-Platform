@@ -1,0 +1,10 @@
+.errorMessage{
+    font-size: smaller;
+    color: white;
+    background-color: red;
+    display:hidden;
+    float: bottom;
+    bottom: 10px;
+    display: block;
+}
+ 

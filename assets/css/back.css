@@ -1,0 +1,9 @@
+.back-to-prev {
+    position: fixed;
+    bottom: 20px;
+    display: none;
+  }
+  
+  .back-to-prev.show {
+    display: block;
+  }

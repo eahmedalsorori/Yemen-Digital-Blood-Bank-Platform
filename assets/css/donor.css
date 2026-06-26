@@ -1,0 +1,25 @@
+body {
+    background-color:#ab1010bb ;
+    color: #fff;
+}
+.donor{
+    width: 85%;
+    height: 85%;
+    margin-left: 5%; margin-top: 2%;margin-right: 5%;
+    padding: 50px;
+    box-sizing: border-box;
+    text-align: center;
+    background-image:url('../images/icon1.png');
+    background-size: auto;
+
+    background-position: center ;
+    background-repeat: no-repeat;
+    border: 2px solid brown;
+  
+    box-shadow:  20px -20px 10px -10px #fff;
+    
+    box-shadow:  10px -5px 20px 20px #fff;
+    
+    border-radius: 25px;
+
+}
